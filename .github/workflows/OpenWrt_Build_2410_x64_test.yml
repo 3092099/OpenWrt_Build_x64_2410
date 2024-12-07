@@ -182,7 +182,7 @@ jobs:
       uses: softprops/action-gh-release@master
       if: steps.organize.outputs.status == 'success' && env.FIRMWARE_RELEASE == 'true' && !cancelled()
       env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN_OPPEN321 }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       with:
         files: ./firmware/*.*
         name: ${{ env.FILE_NAME }}-${{ env.DATE }}-${{ env.FIRMWARE_TAG }}
